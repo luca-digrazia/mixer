@@ -53,7 +53,7 @@ poll_already_in_a_room = (lambda: not is_client_connected() or not share_data.cl
 class SharedFoldersAddFolderOperator(bpy.types.Operator, ImportHelper):
     bl_idname = "mixer.add_shared_folder"
     bl_label = "Add Shared Folder"
-    filepath: bpy.props.StringProperty(subtype="DIR_PATH")
+    filepath = bpy.props.StringProperty(subtype="DIR_PATH")
 
     def execute(self, context):
 
